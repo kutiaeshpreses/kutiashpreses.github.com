@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faqe Islame</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e0f2f1; /* sfond i plotë i faqes */
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #0f5132;
+  color: white;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.center-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.center-nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.center-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SCROLLING TEXT LART ME SFOND ===== */
+#top-news-ticker-wrapper {
+  width: 100%;
+  background: #0f5132; /* sfondi mbulon gjithë gjerësinë */
+  overflow: hidden;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+#top-news-ticker {
+  display: inline-block;
+  color: #ffeb3b;
+  font-weight: bold;
+  font-size: 26px;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  text-align: center;
+}
+
+/* Animacion horizontal */
+@keyframes scroll-left {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* ===== CONTENT ===== */
+.container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section { display: none; }
+section.active { display: block; }
+
+h1, h2 {
+  color: #0f5132;
+}
+
+/* ===== WELCOME TEXT ===== */
+#welcome-container {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+#welcome-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===== DONATION ===== */
+.donation-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start; /* ngre elementet lart */
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.donation-img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  margin-top: 20px; /* pak distancë nga teksti levizës */
+}
+
+.qr-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  text-align: center;
+  max-width: 300px;
+  margin-top: 20px; /* pak distancë nga teksti levizës */
+}
+
+.qr-img {
+  width: 240px;
+  height: 240px;
+  display: block;
+  margin: 12px auto;
+}
+
+.qr-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ===== READ MORE BUTTON ===== */
+#readMoreBtn {
+  margin-bottom: 20px;
+  padding: 6px 12px;
+  background: #0f5132;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#readMoreBtn:hover {
+  background: #145c38;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0f5132;
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">KUTIA E SHPRESËS (Imam: Arbër Berisha) </div>
+
+  <nav class="center-nav">
+    <a href="#" onclick="showSection('fillimi')">Fillimi</a>
+    <a href="#" onclick="showSection('feja')">Feja Islame</a>
+    <a href="#" onclick="showSection('shkenca')">Islami & Shkenca</a>
+    <a href="#" onclick="showSection('rreth')">Rreth nesh</a>
+    <a href="#" onclick="showSection('kontakt')">Kontakti</a>
+  </nav>
+
+  <div></div>
+</header>
+
+<!-- ===== SCROLLING TEXT LART NËN MENU ME SFOND ===== -->
+<div id="top-news-ticker-wrapper">
+  <div id="top-news-ticker">
+    Shoqata Kutia e Shpresës     Raiffeisen Bank
+Xhirollogaria:
+1501200000977876
+
+PayPal:
+kutiaeshpreses@gmail.com
+
+
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ===== FILLIMI ===== -->
+<section id="fillimi" class="active">
+  <h1>Mirë se vini</h1>
+
+  <div id="welcome-container">
+    <p id="welcome-text">
+      Kutia e Shpresës është një faqe e krijuar me zemër për të ndihmuar njerëzit në nevojë dhe për të shpërndarë shpresë atje ku ajo mungon. 
+      <span id="dots">...</span>
+      <span id="more" style="display:none;">
+        Qëllimi ynë është të mbështesim individë dhe familje përmes ndihmave humanitare, bursave për arsim, si dhe iniciativave të ndryshme sociale.
+
+Ne besojmë se çdo ndihmë, sado e vogël, mund të ndryshojë një jetë. Përmes bashkëpunimit, solidaritetit dhe besimit, Kutia e Shpresës synon të jetë një urë lidhëse mes atyre që kanë mundësi të ndihmojnë dhe atyre që kanë nevojë për mbështetje.
+
+Së bashku mund të ndërtojmë një shoqëri më të drejtë, më të ndjeshme dhe plot shpresë
+      </span>
+    </p>
+
+    <button onclick="toggleReadMore()" id="readMoreBtn">Lexo më shumë</button>
+  </div>
+
+  <div class="donation-wrapper">
+    <!-- FOTO -->
+    <img src="590271974_821421220800704_1789792477539201501_n.jpg"
+         alt="Shoqata Kutia e Shpresës"
+         class="donation-img">
+
+    <!-- QR -->
+    <div class="qr-box">
+      <h2>Dhuro tani</h2>
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=Shoqata%20Kutia%20e%20Shpreses%0ARaiffeisen%20Bank%0AXhirollogaria:%201501200000977876%0APayPal:%20kutiaeshpreses@gmail.com"
+        alt="QR Dhurimi"
+        class="qr-img">
+      <div class="qr-text">
+        Shoqata Kutia e Shpresës<br>
+        Raiffeisen Bank<br>
+        Xhirollogaria:<br>
+        <strong>1501200000977876</strong><br><br>
+        PayPal:<br>
+        kutiaeshpreses@gmail.com
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="feja">
+  <h1>Feja Islame</h1>
+  <p>Islami është fe e paqes, drejtësisë dhe mëshirës.</p>
+</section>
+
+<section id="shkenca">
+  <h1>Islami dhe Shkenca</h1>
+  <p>Islami inkurajon kërkimin e dijes dhe shkencës.</p>
+</section>
+
+<section id="rreth">
+  <h1>Rreth nesh</h1>
+  <p>Platformë për edukim dhe davet Islam përmes teknologjisë moderne.</p>
+</section>
+
+<section id="kontakt">
+  <h1>Kontakti</h1>
+  <p>Email: kutiaeshpreses@gmail.com
+</p>
+</section>
+
+</div>
+
+<footer>
+  &copy; 2025 Kutia e Shpresës
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('section').forEach(s =>
+    s.classList.remove('active')
+  );
+  document.getElementById(id).classList.add('active');
+}
+
+function toggleReadMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("readMoreBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Lexo më shumë";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Lexo më pak";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+</body>
+</html>
